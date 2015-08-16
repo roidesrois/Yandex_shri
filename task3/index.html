@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Player using Web Audio API</title>
+    <link rel="stylesheet" type="text/css" media="all" href="css/styles.css" />
+  </head>
+<body>
+
+<div id="background"></div>
+
+<div class="content-outer">
+
+    <canvas width="600" height="200"></canvas>
+    <div class="right_block">
+        <div id="presetContainer">
+            <div id="normal" class="eqButton focusedBtn" onclick="presetChanged(this)">normal</div>
+            <div id="pop" class="eqButton " onclick="presetChanged(this)">pop</div>
+            <div id="rock" class="eqButton " onclick="presetChanged(this)">rock</div>
+            <div id="jazz" class="eqButton " onclick="presetChanged(this)">jazz</div>
+            <div id="classic" class="eqButton " onclick="presetChanged(this)">classic</div>
+        </div>
+        <div id="eqContainer">
+            <div id="eq80Hz">
+                <span class="eqSpan">80Hz</span>
+                <input onchange="eqValueChange(this);" id="80" type="range" class="eqFilterSlider" value="0" min="-30" max="30"
+                       step="0.01">
+            </div>
+            <div id="eq240Hz">
+                <span class="eqSpan">240Hz</span>
+                <input onchange="eqValueChange(this);" id="240" type="range" class="eqFilterSlider" value="0" min="-30" max="30"
+                       step="0.01">
+            </div>
+            <div id="eq750Hz">
+                <span class="eqSpan">750Hz</span>
+                <input onchange="eqValueChange(this);" id="750" type="range" class="eqFilterSlider" value="0" min="-30" max="30"
+                       step="0.01">
+            </div>
+            <div id="eq2200Hz">
+                <span class="eqSpan">2200Hz</span>
+                <input onchange="eqValueChange(this);" id="2200" type="range" class="eqFilterSlider" value="0" min="-30"
+                       max="30" step="0.01">
+            </div>
+            <div id="eq6000Hz">
+                <span class="eqSpan">6000Hz</span>
+                <input onchange="eqValueChange(this);" id="6000" type="range" class="eqFilterSlider" value="0" min="-30"
+                       max="30" step="0.01">
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="audioControls">
+        <div id="prev">
+            <img id="prevIcon" src="Images/prev.png" onclick="previous();">
+        </div>
+        <div id="play">
+            <img id="playIcon" src="Images/play.png" onclick="playAudio();">
+        </div>
+        <div id="stop" style="display: none">
+            <img id="stopIcon" src="Images/stop.png" onclick="stopAudio();">
+        </div>
+        <div id="next">
+            <img id="nextIcon" src="Images/next.png" onclick="next();">
+        </div>
+    </div>
+
+    <div id="musicProgress">
+        <input type="range" class="horizontalSlider" name="progress" value="0" step="1" id="progress" min="0"
+               onchange="javascript:progressChange(this)"> <span id="progressTime">00:00</span>
+
+    </div>
+    <div id="controls">
+        <div id="volumeControl">
+            <span style="float:left;"><img id="volumeIcon" src="Images/Volume.png"></span>
+            <span style="float:left; margin-left:5px; margin-top:2px;">
+                <input class="horizontalSlider" type="range" name="vol" value="1" step="0.1" id="vol" min="0" max="1"
+                onchange="javascript:volumeChange(this)"></span>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="playlistContainer">
+    <div id="playlistHeader">
+        Drop your audio files here (.mp3 .ogg or .wav)
+    </div>
+    <div id="playlistRing">
+
+    </div>
+    </div>
+    <div id="playlistControls">
+        <div id="addFiles">
+            <img id="addFilesIcon" src="Images/addFiles.png">
+            <input class="upload" type="file" id="addFilesBtn" name="file" multiple onchange="addToPlaylist(this.files)"
+                   accept="audio/mp3"/>
+
+        </div>
+        <div id="removeFiles">
+            <img id="removeFilesIcon" src="Images/removeFiles.png" onclick="removeFromPlayList()">
+        </div>
+    </div>
+
+</div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

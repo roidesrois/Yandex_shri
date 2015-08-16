@@ -1,0 +1,145 @@
+/************************************************************************************
+more than 1000
+*************************************************************************************/
+@media screen and (min-width: 1000px) {
+    tbody tr {
+        cursor: none;
+        pointer-events: none;
+    }
+    .toggle {
+        display: inline-block;
+    }
+
+}
+/************************************************************************************
+smaller than 90
+*************************************************************************************/
+@media screen and (max-width: 900px) {
+    .airline {
+        display: none;
+    }
+    tbody tr {
+        cursor: pointer;
+        pointer-events: visible;
+    }
+}
+/************************************************************************************
+smaller than 800
+*************************************************************************************/
+@media screen and (max-width: 800px) {
+    .toggle {
+        display: none;
+    }
+    tbody tr {
+        cursor: pointer;
+        pointer-events: visible;
+    }
+}
+
+body {
+    margin: 0;
+    font: normal 62.5% Arial, Helvetica, sans-serif;
+    background-color: #fff;
+}
+table {
+    border-collapse: collapse;
+    border-left: 1px solid #c5c5c5;
+    border-bottom: 1px solid #c5c5c5;
+    margin-bottom: 3em;
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 1;
+}
+td, th {
+    padding: 0.75em 1em;
+    text-align: left;
+    border-right: 1px solid #c5c5c5;
+    position: relative;
+}
+th {
+    background-color: #20C05C;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+}
+thead {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    top: 0;
+}
+th:hover::after, td:hover::after {
+  content: "";
+  position: absolute;
+  background-color: #E4E4E4;
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+}
+tbody tr:nth-child(2n-1) {
+    background-color: #f5f5f5;
+    transition: all .125s ease-in-out;
+}
+tbody tr:hover {
+    background-color: #E4E4E4;
+    cursor: pointer;
+}
+.arrivals_icon {
+    background: url('../images/arrivals.png') no-repeat 50% 50%;
+}
+.departures_icon {
+    background: url('../images/departures.png') no-repeat 50% 50%;
+}
+.arrivals, .departures {
+    display: none;
+}
+#arrivals:checked ~ .arrivals {
+    display: block;
+}
+#departures:checked ~ .departures {
+    display: block;
+} 
+tbody tr[data]:focus:after {
+  content: attr(data);
+  display: block;
+  position: absolute;
+  width: auto;
+  top: 50%; left: 50%;
+  font-size: 14px;
+  padding: 0.75em 1em;
+  -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);
+  border: 1px solid rgb(100,100,100);
+  background: #c5c5c5;
+  color: #FFF;
+  z-index: 9;
+  outline-style: solid;
+  outline-color: #20C05C;
+}
+tbody tr:focus ~ tr, tbody tr:focus {
+    cursor: none !important;
+    pointer-events: none !important;
+    z-index: 10 !important;
+    overflow: hidden !important;
+}
+.aeroflot {
+    background: url('../images/aeroflot.gif') no-repeat 50% 50%;
+    background-size: 100%;
+    width: 75px;
+}
+.s7 {
+    background: url('../images/s7.gif') no-repeat 50% 50%;
+    background-size: 100%;
+    width: 75px;
+}
+.ukraine {
+    background: url('../images/ukraine.gif') no-repeat 50% 50%;
+    background-size: 100%;
+    width: 75px;
+}
+
+

@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>Arrivals and Departures</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+<body>
+	<main>
+		<input type="radio" id="arrivals" name="status" value="arrivals" checked/>Прилет
+		<input type="radio" id="departures" name="status" value="departures" />Вылет</br>
+		<table class="departures" width="100" align="center">
+			<colgroup>
+				<col class="col1">
+				<col class="col2">
+				<col class="col3">
+				<col class="col4">
+				<col class="col5">
+				<col class="col6">		
+				<col class="col7">
+				<col class="col8">
+				<col class="col9">
+				<col class="col10">
+			</colgroup>
+			<thead>
+				<tr>
+                   <th>Тип рейса</th>
+                   <th>Номер рейса</th>
+                   <th class="airline">Авиакoмпания</th>
+                   <th>Логотип</th>
+                   <th>Тип воздушного судна</th>
+                   <th>Аэропорт назначения</th>
+                   <th>Плановое время вылета</th>
+                   <th>Плановое время прилета</th>
+                   <th>Статус рейса</th>
+                   <th>Примечания</th>
+				</tr>
+			</thead>
+			<tbody>
+               	<tr data="Вылет, DL 1012, Уральские авиалинии, Boeing 777-300, Шереметьево, 11:25, 23:10, Ожидается, -" tabindex="0">
+			   	   <td class="departures_icon"></td>
+			       <td>DL 1012</td>
+			       <td class="airline">Уральские авиалинии</td>
+			       <td class="ukraine"></td>
+			       <td><span class="toggle">Boeing </span> 777-300</td>
+			       <td>Шереметьево</td>
+			       <td>11:25</td>
+			       <td>23:10</td>
+			       <td>Ожидается</td>
+			       <td>-</td>
+                </tr>
+                <tr data="Вылет, SU 5563, Аэрофлот, Airbus OB23, Симферополь, 12:45, 15:05, Задержан, -" tabindex="0">
+                   <td class="departures_icon"></td>
+                   <td>SU 5563</td>
+                   <td class="airline">Аэрофлот</td>
+                   <td class="aeroflot"></td>
+                   <td><span class="toggle">Airbus </span> OB23</td>
+                   <td>Симферополь</td>
+                   <td>12:45</td>
+                   <td>15:05</td>
+                   <td>Задержан</td>
+                   <td>-</td>
+                </tr>
+          		<tr data="Вылет, SU 8702, Аэрофлот, Airbus B293, Париж, 11:45, 14:05, Вылетел, -" tabindex="0">
+                   <td class="departures_icon"></td>
+                   <td>SU 8702</td>
+                   <td class="airline">Аэрофлот </td>
+                   <td class="aeroflot"></td>
+                   <td><span class="toggle">Airbus </span> B293</td>
+                   <td>Париж</td>
+                   <td>11:45</td>
+                   <td>14:05</td>
+                   <td>Вылетел</td>
+                   <td>-</td>
+                </tr>
+                <tr data="Вылет, DL 1011, Уральские авиалинии, Boeing 777-300, Шереметьево, 11:25, 23:10, Ожидается, -" tabindex="0">
+                   <td class="departures_icon"></td>
+                   <td>DL 1011</td>
+                   <td class="airline">Уральские авиалинии</td>
+                   <td class="ukraine"></td>
+                   <td><span class="toggle">Boeing </span> 777-300</td>
+                   <td>Шереметьево</td>
+                   <td>11:25</td>
+                   <td>23:10</td>
+                   <td>Ожидается</td>
+                   <td>-</td>
+                </tr>
+                <tr data="Вылет, DL 1012, Уральские авиалинии, Boeing 777-300, Шереметьево, 11:25, 23:10, Ожидается, -" tabindex="0">
+			   	   <td class="departures_icon"></td>
+			       <td>DL 1012</td>
+			       <td class="airline">Уральские авиалинии</td>
+			       <td class="ukraine"></td>
+			       <td><span class="toggle">Boeing </span> 777-300</td>
+			       <td>Шереметьево</td>
+			       <td>11:25</td>
+			       <td>23:10</td>
+			       <td>Ожидается</td>
+			       <td>-</td>
+                </tr>
+                <tr data="Вылет, SU 5563, Аэрофлот, Airbus OB23, Симферополь, 12:45, 15:05, Задержан, Технические неполадки" tabindex="0">
+                   <td class="departures_icon"></td>
+                   <td>SU 5563</td>
+                   <td class="airline">Аэрофлот</td>
+                   <td class="aeroflot"></td>
+                   <td><span class="toggle">Airbus </span> OB23</td>
+                   <td>Симферополь</td>
+                   <td>12:45</td>
+                   <td>15:05</td>
+                   <td>Задержан</td>
+                   <td>Технические неполадки</td>
+                </tr>
+          		<tr data="Вылет, SU 8702, Аэрофлот, Airbus B293, Париж, 11:45, 14:05, Вылетел, -" tabindex="0">
+                   <td class="departures_icon"></td>
+                   <td>SU 8702</td>
+                   <td class="airline">Аэрофлот </td>
+                   <td class="aeroflot"></td>
+                   <td><span class="toggle">Airbus </span> B293</td>
+                   <td>Париж</td>
+                   <td>11:45</td>
+                   <td>14:05</td>
+                   <td>Вылетел</td>
+                   <td>-</td>
+                </tr>
+                <tr data="Вылет, SU 2563, Аэрофлот, Airbus А001, Симферополь, 12:45, 15:05, Задержан, Технические неполадки" tabindex="0">
+                   <td class="departures_icon"></td>
+                   <td>SU 2563</td>
+                   <td class="airline">Аэрофлот</td>
+                   <td class="aeroflot"></td>
+                   <td><span class="toggle">Airbus </span> A401</td>
+                   <td>Симферополь</td>
+                   <td>12:45</td>
+                   <td>15:05</td>
+                   <td>Задержан</td>
+                   <td>Технические неполадки</td>
+                </tr>
+      			<tr data="Вылет, SU 2462, Аэрофлот, Airbus B131, Париж, 11:45, 14:05, Вылетел, -" tabindex="0">
+                   <td class="departures_icon"></td>
+                   <td>SU 2462</td>
+                   <td class="airline">Аэрофлот </td>
+                   <td class="aeroflot"></td>
+                   <td><span class="toggle">Airbus </span> FG21</td>
+                   <td>Париж</td>
+                   <td>11:45</td>
+                   <td>14:05</td>
+                   <td>Вылетел</td>
+                   <td>-</td>
+                </tr>
+                <tr data="Вылет, SU 1255, S7, Airbus H201, Шереметьево, 9:45, 13:05, Прибыл, -" tabindex="0">
+                   <td class="departures_icon"></td>
+                   <td>SU 1255</td>
+                   <td class="airline">S7</td>
+                   <td class="s7"></td>
+                   <td><span class="toggle">Airbus </span> H201</td>
+                   <td>Шереметьево</td>
+                   <td>9:45</td>
+                   <td>13:05</td>
+                   <td>Прибыл</td>
+                   <td>-</td>
+                </tr>
+                <tr tabindex="0">
+                   <td class="departures_icon"></td>
+                   <td>SU 2563</td>
+                   <td class="airline">Аэрофлот</td>
+                   <td class="aeroflot"></td>
+                   <td><span class="toggle">Airbus </span> AG01</td>
+                   <td>Симферополь</td>
+                   <td>12:45</td>
+                   <td>15:05</td>
+                   <td>Задержан</td>
+                   <td>Технические неполадки</td>
+                </tr>
+                <tr data="Вылет, SU 2563, Аэрофлот, Airbus А001, Симферополь, 12:45, 15:05, Задержан, Технические неполадки" tabindex="0">
+                   <td class="departures_icon"></td>
+                   <td>SU 2563</td>
+                   <td class="airline">Аэрофлот</td>
+                   <td class="aeroflot"></td>
+                   <td><span class="toggle">Airbus </span> A401</td>
+                   <td>Симферополь</td>
+                   <td>12:45</td>
+                   <td>15:05</td>
+                   <td>Задержан</td>
+                   <td>Технические неполадки</td>
+                </tr>
+      			<tr data="Вылет, SU 2462, Аэрофлот, Airbus B131, Париж, 11:45, 14:05, Вылетел, -" tabindex="0">
+                   <td class="departures_icon"></td>
+                   <td>SU 2462</td>
+                   <td class="airline">Аэрофлот </td>
+                   <td class="aeroflot"></td>
+                   <td><span class="toggle">Airbus </span> FG21</td>
+                   <td>Париж</td>
+                   <td>11:45</td>
+                   <td>14:05</td>
+                   <td>Вылетел</td>
+                   <td>-</td>
+                </tr>
+                <tr data="Вылет, SU 1255, S7, Airbus H201, Шереметьево, 9:45, 13:05, Прибыл, -" tabindex="0">
+                   <td class="departures_icon"></td>
+                   <td>SU 1255</td>
+                   <td class="airline">S7</td>
+                   <td class="s7"></td>
+                   <td><span class="toggle">Airbus </span> H201</td>
+                   <td>Шереметьево</td>
+                   <td>9:45</td>
+                   <td>13:05</td>
+                   <td>Прибыл</td>
+                   <td>-</td>
+                </tr>
+                <tr tabindex="0">
+                   <td class="departures_icon"></td>
+                   <td>SU 2563</td>
+                   <td class="airline">Аэрофлот</td>
+                   <td class="aeroflot"></td>
+                   <td><span class="toggle">Airbus </span> AG01</td>
+                   <td>Симферополь</td>
+                   <td>12:45</td>
+                   <td>15:05</td>
+                   <td>Задержан</td>
+                   <td>Технические неполадки</td>
+                </tr>
+                <tr data="Вылет, SU 2563, Аэрофлот, Airbus А001, Симферополь, 12:45, 15:05, Задержан, Технические неполадки" tabindex="0">
+                   <td class="departures_icon"></td>
+                   <td>SU 2563</td>
+                   <td class="airline">Аэрофлот</td>
+                   <td class="aeroflot"></td>
+                   <td><span class="toggle">Airbus </span> A401</td>
+                   <td>Симферополь</td>
+                   <td>12:45</td>
+                   <td>15:05</td>
+                   <td>Задержан</td>
+                   <td>Технические неполадки</td>
+                </tr>
+               	<tr data="Вылет, DL 1012, Уральские авиалинии, Boeing 777-300, Шереметьево, 11:25, 23:10, Ожидается, -" tabindex="0">
+			   	   <td class="departures_icon"></td>
+			       <td>DL 1012</td>
+			       <td class="airline">Уральские авиалинии</td>
+			       <td class="ukraine"></td>
+			       <td><span class="toggle">Boeing </span> 777-300</td>
+			       <td>Шереметьево</td>
+			       <td>11:25</td>
+			       <td>23:10</td>
+			       <td>Ожидается</td>
+			       <td>-</td>
+                </tr>
+                <tr data="Вылет, SU 5563, Аэрофлот, Airbus OB23, Симферополь, 12:45, 15:05, Задержан, Технические неполадки" tabindex="0">
+                   <td class="departures_icon"></td>
+                   <td>SU 5563</td>
+                   <td class="airline">Аэрофлот</td>
+                   <td class="aeroflot"></td>
+                   <td><span class="toggle">Airbus </span> OB23</td>
+                   <td>Симферополь</td>
+                   <td>12:45</td>
+                   <td>15:05</td>
+                   <td>Задержан</td>
+                   <td>Технические неполадки</td>
+                </tr>
+          		<tr data="Вылет, SU 8702, Аэрофлот, Airbus B293, Париж, 11:45, 14:05, Вылетел, -" tabindex="0">
+                   <td class="departures_icon"></td>
+                   <td>SU 8702</td>
+                   <td class="airline">Аэрофлот </td>
+                   <td class="aeroflot"></td>
+                   <td><span class="toggle">Airbus </span> B293</td>
+                   <td>Париж</td>
+                   <td>11:45</td>
+                   <td>14:05</td>
+                   <td>Вылетел</td>
+                   <td>-</td>
+                </tr>
+              	<tr data="Вылет, DL 1012, Уральские авиалинии, Boeing 777-300, Шереметьево, 11:25, 23:10, Ожидается, -" tabindex="0">
+			   	   <td class="departures_icon"></td>
+			       <td>DL 1012</td>
+			       <td class="airline">Уральские авиалинии</td>
+			       <td class="ukraine"></td>
+			       <td><span class="toggle">Boeing </span> 777-300</td>
+			       <td>Шереметьево</td>
+			       <td>11:25</td>
+			       <td>23:10</td>
+			       <td>Ожидается</td>
+			       <td>-</td>
+                </tr>
+                <tr data="Вылет, SU 5563, Аэрофлот, Airbus OB23, Симферополь, 12:45, 15:05, Задержан, -" tabindex="0">
+                   <td class="departures_icon"></td>
+                   <td>SU 5563</td>
+                   <td class="airline">Аэрофлот</td>
+                   <td class="aeroflot"></td>
+                   <td><span class="toggle">Airbus </span> OB23</td>
+                   <td>Симферополь</td>
+                   <td>12:45</td>
+                   <td>15:05</td>
+                   <td>Задержан</td>
+                   <td>-</td>
+                </tr>
+          		<tr data="Вылет, SU 8702, Аэрофлот, Airbus B293, Париж, 11:45, 14:05, Вылетел, -" tabindex="0">
+                   <td class="departures_icon"></td>
+                   <td>SU 8702</td>
+                   <td class="airline">Аэрофлот </td>
+                   <td class="aeroflot"></td>
+                   <td><span class="toggle">Airbus </span> B293</td>
+                   <td>Париж</td>
+                   <td>11:45</td>
+                   <td>14:05</td>
+                   <td>Вылетел</td>
+                   <td>-</td>
+                </tr>
+                <tr data="Вылет, DL 1011, Уральские авиалинии, Boeing 777-300, Шереметьево, 11:25, 23:10, Ожидается, -" tabindex="0">
+                   <td class="departures_icon"></td>
+                   <td>DL 1011</td>
+                   <td class="airline">Уральские авиалинии</td>
+                   <td class="ukraine"></td>
+                   <td><span class="toggle">Boeing </span> 777-300</td>
+                   <td>Шереметьево</td>
+                   <td>11:25</td>
+                   <td>23:10</td>
+                   <td>Ожидается</td>
+                   <td>-</td>
+                </tr>
+			</tbody>
+		</table>
+
+
+
+		<table class="arrivals">
+			<thead>
+				<tr>
+                   <th>Тип рейса</th>
+                   <th>Номер рейса</th>
+                   <th class="airline">Авиакoмпания</th>
+                   <th>Логотип</th>
+                   <th>Тип воздушного судна</th>
+                   <th>Аэропорт назначения</th>
+                   <th>Плановое время вылета</th>
+                   <th>Плановое время прилета</th>
+                   <th>Статус рейса</th>
+                   <th>Примечания</th>
+				</tr>
+			</thead>
+			<tbody>
+               	<tr tabindex="0" data="Прилет, SU 1255, S7, Airbus H201, Шереметьево, 9:45, 13:05, Прибыл, -" tabindex="0">
+                   <td class="arrivals_icon"></td>
+                   <td>SU 1255</td>
+                   <td class="airline">S7</td>
+                   <td class="s7"></td>
+                   <td><span class="toggle">Airbus </span> H201</td>
+                   <td>Шереметьево</td>
+                   <td>9:45</td>
+                   <td>13:05</td>
+                   <td>Прибыл</td>
+                   <td>-</td>
+                </tr>
+                <tr tabindex="0">
+                   <td class="arrivals_icon"></td>
+                   <td>SU 2563</td>
+                   <td class="airline">Аэрофлот</td>
+                   <td class="aeroflot"></td>
+                   <td><span class="toggle">Airbus </span> AG01</td>
+                   <td>Симферополь</td>
+                   <td>12:45</td>
+                   <td>15:05</td>
+                   <td>Задержан</td>
+                   <td>Технические неполадки</td>
+                </tr>
+                <tr data="Прилет, SU 2563, Аэрофлот, Airbus А001, Симферополь, 12:45, 15:05, Задержан, Технические неполадки" tabindex="0">
+                   <td class="arrivals_icon"></td>
+                   <td>SU 2563</td>
+                   <td class="airline">Аэрофлот</td>
+                   <td class="aeroflot"></td>
+                   <td><span class="toggle">Airbus </span> A401</td>
+                   <td>Симферополь</td>
+                   <td>12:45</td>
+                   <td>15:05</td>
+                   <td>Задержан</td>
+                   <td>Технические неполадки</td>
+                </tr>
+                <tr data="Прилет, DL 1012, Уральские авиалинии, Boeing 777-300, Шереметьево, 11:25, 23:10, Ожидается, -" tabindex="0">
+					 <td class="arrivals_icon"></td>
+					 <td>DL 1012</td>
+					 <td class="airline">Уральские авиалинии</td>
+					 <td class="ukraine"></td>
+					 <td><span class="toggle">Boeing </span> 777-300</td>
+					 <td>Шереметьево</td>
+					 <td>11:25</td>
+					 <td>23:10</td>
+					 <td>Ожидается</td>
+					 <td>-</td>
+                </tr>
+                <tr data="Прилет, SU 5563, Аэрофлот, Airbus OB23, Симферополь, 12:45, 15:05, Задержан, Технические неполадки" tabindex="0">
+                   <td class="arrivals_icon"></td>
+                   <td>SU 5563</td>
+                   <td class="airline">Аэрофлот</td>
+                   <td class="aeroflot"></td>
+                   <td><span class="toggle">Airbus </span> OB23</td>
+                   <td>Симферополь</td>
+                   <td>12:45</td>
+                   <td>15:05</td>
+                   <td>Задержан</td>
+                   <td>Технические неполадки</td>
+                </tr>
+              <tr data="Прилет, SU 8702, Аэрофлот, Airbus B293, Париж, 11:45, 14:05, Прилетел, -" tabindex="0">
+                   <td class="arrivals_icon"></td>
+                   <td>SU 8702</td>
+                   <td class="airline">Аэрофлот </td>
+                   <td class="aeroflot"></td>
+                   <td><span class="toggle">Airbus </span> B293</td>
+                   <td>Париж</td>
+                   <td>11:45</td>
+                   <td>14:05</td>
+                   <td>Прилетел</td>
+                   <td>-</td>
+                </tr>
+                <tr data="Прилет, DL 1012, Уральские авиалинии, Boeing 777-300, Шереметьево, 11:25, 23:10, Ожидается, -" tabindex="0">
+             <td class="arrivals_icon"></td>
+             <td>DL 1012</td>
+             <td class="airline">Уральские авиалинии</td>
+             <td class="ukraine"></td>
+             <td><span class="toggle">Boeing </span> 777-300</td>
+             <td>Шереметьево</td>
+             <td>11:25</td>
+             <td>23:10</td>
+             <td>Ожидается</td>
+             <td>-</td>
+                </tr>
+                <tr data="Прилет, SU 5563, Аэрофлот, Airbus OB23, Симферополь, 12:45, 15:05, Задержан, -" tabindex="0">
+                   <td class="arrivals_icon"></td>
+                   <td>SU 5563</td>
+                   <td class="airline">Аэрофлот</td>
+                   <td class="aeroflot"></td>
+                   <td><span class="toggle">Airbus </span> OB23</td>
+                   <td>Симферополь</td>
+                   <td>12:45</td>
+                   <td>15:05</td>
+                   <td>Задержан</td>
+                   <td>-</td>
+                </tr>
+			</tbody>
+		</table>
+	</main>
+</body>
+</html>
